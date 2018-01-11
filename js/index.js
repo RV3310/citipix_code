@@ -10,17 +10,17 @@ function addCity(event) {
   event.preventDefault();  
   // Store input as a value in the variable city
     var input = $('#city-type').val(); 
-    var city = input.toLowerCase().trim();
+    var city = input.toLowerCase().replace(/\s/g,"");
      // if input matches string change background
-    if (city == "NYC" || city =="nyc" || city == "New York" || city == "New York City" || city == "new york city"){ // How do I do other options: ny, New york, etc?
+    if (city =="nyc" || city == "newyorkcity"){ 
       $("body").attr('class','nyc');
-    } else if (city == "SF" || city == "sf" || city =="san fran" || city == "San Fran" || city == "San Francisco") {      
+    } else if (city == "sf" || city =="sanfran" || city == "sanfrancisco") {      
        $("body").attr('class','sf');
-    } else if (city == "LA" || city =="los angeles" || city == "Los Angeles" || city == "LAX") {      
+    } else if (city =="losangeles" || city == "la" || city == "lax") {      
        $("body").attr('class','la');
-    } else if (city == "AUS" || city =="austin" || city == "Austin" || city == "Austin Texas" || city == "ATX") {      
+    } else if (city == "aus" || city =="austin" || city == "austintexas" || city == "atx") {      
        $("body").attr('class','aus');
-    } else if (city == "SYD" || city =="sydney" || city == "Sydney") {      
+    } else if (city == "syd" || city =="sydney") {      
        $("body").attr('class','syd');
     } else {
       alert("You haven't been there....yet!")
